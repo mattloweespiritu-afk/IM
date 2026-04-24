@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spirit's Pharmacy | Login</title>
+  <link rel="stylesheet" href="css/login.css" />
+</head>
+<body>
+  <main class="auth-shell">
+    <section class="auth-card">
+      <!-- Left Brand Panel -->
+      <div class="auth-brand">
+        <div class="brand-top">
+          <div class="brand-logo-ring">
+            <img src="images/pharmacy-logo.jpg" alt="Spirit's Pharmacy Logo" class="brand-logo" />
+          </div>
+
+          <div class="brand-copy">
+            <span class="brand-overline">Spirit's Drugstore</span>
+            <h1>Spirit's Pharmacy<br />Operations System</h1>
+            <p>
+              Inventory, sales, batch tracking, and expiry control built for
+              fast, secure, and reliable daily pharmacy operations.
+            </p>
+          </div>
+        </div>
+
+        <div class="brand-bottom">
+          <div class="trust-card">
+            <div class="trust-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M12 3l6 2.5V11c0 4.2-2.7 8-6 10-3.3-2-6-5.8-6-10V5.5L12 3Z" stroke="currentColor" stroke-width="1.8"/>
+                <path d="M9.6 11.7l1.6 1.6 3.2-3.4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div>
+              <h3>Secure Access</h3>
+              <p>Protected login for authorized pharmacy personnel only.</p>
+            </div>
+          </div>
+
+          <div class="brand-footer">
+            <span>© 2026 Spirit's Drugstore</span>
+            <span>Version 1.0.4</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Login Panel -->
+      <div class="auth-panel">
+        <div class="panel-header">
+          <span class="panel-overline">Welcome Back</span>
+          <h2>Sign In</h2>
+          <p>Enter your credentials to access the system.</p>
+        </div>
+
+        <div id="formAlert" class="form-alert" role="alert" aria-live="polite"></div>
+
+        <form id="loginForm" class="login-form" novalidate>
+          <div class="field-group">
+            <label for="username">Username</label>
+            <div class="field-control">
+              <span class="field-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M12 12a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Z" stroke="currentColor" stroke-width="1.8"/>
+                  <path d="M5 20a7 7 0 0 1 14 0" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                </svg>
+              </span>
+              <input
+                type="text"
+                id="username"
+                name="username"
+                placeholder="Enter your username"
+                autocomplete="username"
+              />
+            </div>
+            <small class="field-error" id="usernameError"></small>
+          </div>
+
+          <div class="field-group">
+            <div class="label-row">
+              <label for="password">Password</label>
+              <a href="#" class="aux-link">Forgot Password?</a>
+            </div>
+            <div class="field-control">
+              <span class="field-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <rect x="5" y="10" width="14" height="10" rx="2" stroke="currentColor" stroke-width="1.8"/>
+                  <path d="M8 10V8a4 4 0 1 1 8 0v2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                </svg>
+              </span>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Enter your password"
+                autocomplete="current-password"
+              />
+              <button type="button" id="togglePassword" class="toggle-password" aria-label="Show password">
+                <svg id="eyeOpen" viewBox="0 0 24 24" fill="none">
+                  <path d="M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6Z" stroke="currentColor" stroke-width="1.8"/>
+                  <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.8"/>
+                </svg>
+                <svg id="eyeClosed" viewBox="0 0 24 24" fill="none" class="hidden">
+                  <path d="M3 3l18 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                  <path d="M10.6 6.3A10.2 10.2 0 0 1 12 6c6 0 9.5 6 9.5 6a16 16 0 0 1-3.1 3.7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                  <path d="M6.5 8.1C4 10 2.5 12 2.5 12s3.5 6 9.5 6a10 10 0 0 0 3.3-.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                </svg>
+              </button>
+            </div>
+            <small class="field-error" id="passwordError"></small>
+          </div>
+
+          <div class="options-row">
+            <label class="checkbox-wrap">
+              <input type="checkbox" id="remember" name="remember" />
+              <span>Remember this device</span>
+            </label>
+          </div>
+
+          <button type="submit" id="loginButton" class="login-btn">
+            <span class="btn-text">Access System</span>
+            <span class="btn-spinner hidden"></span>
+            <span class="btn-arrow" aria-hidden="true">→</span>
+          </button>
+        </form>
+
+        <p class="panel-note">
+          Authorized personnel only. All access attempts may be recorded for audit and security review.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <script src="javascript/login.js"></script>
+</body>
+</html>
